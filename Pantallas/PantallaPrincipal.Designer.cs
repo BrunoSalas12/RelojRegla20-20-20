@@ -117,12 +117,14 @@
             Controls.Add(lblTemporizador);
             Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            KeyPreview = true;
             Margin = new Padding(4);
             MaximizeBox = false;
             Name = "PantallaPrincipal";
             StartPosition = FormStartPosition.Manual;
             Text = "Regla 20-20-20";
             Load += Principal_Load;
+            KeyDown += PantallaPrincipal_KeyDown;
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

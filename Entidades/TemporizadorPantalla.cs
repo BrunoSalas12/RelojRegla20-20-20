@@ -42,7 +42,7 @@ namespace Regla20_20_20.Entidades
             if (this.cantidadExtra >= 10)
                 return this.tiempoSegundos;
 
-            if (this.cantidadExtra + minutosExtra >= 10) 
+            if (this.cantidadExtra + minutosExtra > 10) 
             {
                 int tiempoASumar = 10 - this.cantidadExtra;
                 this.tiempoSegundos += tiempoASumar * 60;

@@ -39,30 +39,27 @@ namespace Regla20_20_20.Logica
             {
                 if (principal)
                 {
-                    pantallaPrincipal.detenerSegundero();
-                    pantallaPrincipal.Hide();
-
                     _temporizadores[1].agregarTiempo(_temporizadores[0].getCantidadExtra());
+                    this.cambiarAPantallaMirarLejos();
 
-                    pantallaMiraLejos.Show();
-                    pantallaMiraLejos.BringToFront();
-                    pantallaMiraLejos.TopMost = true;
-                    pantallaMiraLejos.activarSegundero();
-                    pantallaMiraLejos.Activate();
-                    pantallaMiraLejos.Focus();
                 }
                 else 
                 {
                     this.reiniciarTemporizadores();
+                    this.cambiarAPantallaPrincipal();
 
-                    pantallaMiraLejos.detenerSegundero();
-                    pantallaMiraLejos.TopMost = false;
-                    pantallaMiraLejos.Hide();
-
-                    pantallaPrincipal.activarSegundero();
-                    pantallaPrincipal.Show();
                 }
 
+            }
+        }
+
+        public void agregarTiempoTemporizador(int tiempoExtra, bool principal)
+        {
+            int sumoTiempo = _temporizadores[0].agregarTiempo(tiempoExtra);
+
+            if (!principal && sumoTiempo != 0)
+            {
+                this.cambiarAPantallaPrincipal();
             }
         }
 
@@ -76,6 +73,29 @@ namespace Regla20_20_20.Logica
         {
             _temporizadores[0].reiniciar();
             _temporizadores[1].reiniciar();
+        }
+
+        private void cambiarAPantallaPrincipal() 
+        {
+            pantallaMiraLejos.detenerSegundero();
+            pantallaMiraLejos.TopMost = false;
+            pantallaMiraLejos.Hide();
+
+            pantallaPrincipal.activarSegundero();
+            pantallaPrincipal.Show();
+        }
+
+        private void cambiarAPantallaMirarLejos()
+        {
+            pantallaPrincipal.detenerSegundero();
+            pantallaPrincipal.Hide();
+
+            pantallaMiraLejos.Show();
+            pantallaMiraLejos.BringToFront();
+            pantallaMiraLejos.TopMost = true;
+            pantallaMiraLejos.activarSegundero();
+            pantallaMiraLejos.Activate();
+            pantallaMiraLejos.Focus();
         }
 
         private string convertirIntSegundosATiempoTexto(int tiempoSegundos)

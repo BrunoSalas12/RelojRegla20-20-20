@@ -118,7 +118,7 @@
             ClientSize = new Size(629, 459);
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PantallaMiraLejos";
@@ -128,6 +128,7 @@
             Text = "PantallaMiraLejos";
             WindowState = FormWindowState.Maximized;
             Load += PantallaMiraLejos_Load;
+            KeyDown += PantallaMiraLejos_KeyDown;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

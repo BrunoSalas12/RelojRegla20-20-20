@@ -72,5 +72,47 @@ namespace Regla20_20_20
             string sonidoSeleccionado = cmbSonidoAviso.Text;
             _controlador.setSonido(sonidoSeleccionado);
         }
+
+        private void PantallaPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.Shift) 
+            { //Manejo de la combinación de teclas para agregar minutos al temporizador
+                //Con los números se pueden agregar hasta 10 minutos de tiempo de pantalla
+                switch (e.KeyCode)
+                {
+                    case Keys.D1:
+                        _controlador.agregarTiempoTemporizador(1, this.principal);
+                        break;
+                    case Keys.D2:
+                        _controlador.agregarTiempoTemporizador(2, this.principal);
+                        break;
+                    case Keys.D3:
+                        _controlador.agregarTiempoTemporizador(3, this.principal);
+                        break;
+                    case Keys.D4:
+                        _controlador.agregarTiempoTemporizador(4, this.principal);
+                        break;
+                    case Keys.D5:
+                        _controlador.agregarTiempoTemporizador(5, this.principal);
+                        break;
+                    case Keys.D6:
+                        _controlador.agregarTiempoTemporizador(6, this.principal);
+                        break;
+                    case Keys.D7:
+                        _controlador.agregarTiempoTemporizador(7, this.principal);
+                        break;
+                    case Keys.D8:
+                        _controlador.agregarTiempoTemporizador(8, this.principal);
+                        break;
+                    case Keys.D9:
+                        _controlador.agregarTiempoTemporizador(9, this.principal);
+                        break;
+                    case Keys.D0:
+                        _controlador.agregarTiempoTemporizador(10, this.principal);
+                        break;
+                }
+                lblTemporizador.Text = _controlador.obtenerTiempoTemporizador(principal);
+            }
+        }
     }
 }
