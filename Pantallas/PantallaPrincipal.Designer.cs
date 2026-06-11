@@ -64,14 +64,16 @@
             // 
             // cmbSonidoAviso
             // 
+            cmbSonidoAviso.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSonidoAviso.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSonidoAviso.FormattingEnabled = true;
-            cmbSonidoAviso.Items.AddRange(new object[] { "Ninguno" });
+            cmbSonidoAviso.Items.AddRange(new object[] { "Ninguno", "Ding", "BeepBeep" });
             cmbSonidoAviso.Location = new Point(58, 12);
             cmbSonidoAviso.Margin = new Padding(4);
             cmbSonidoAviso.Name = "cmbSonidoAviso";
             cmbSonidoAviso.Size = new Size(206, 26);
             cmbSonidoAviso.TabIndex = 0;
+            cmbSonidoAviso.SelectedIndexChanged += cmbSonidoAviso_SelectedIndexChanged;
             // 
             // timerSegundero
             // 

@@ -18,6 +18,7 @@ namespace Regla20_20_20
         private void Principal_Load(object sender, EventArgs e)
         {
             lblTemporizador.Text = _controlador.obtenerTiempoTemporizador(principal);
+            cmbSonidoAviso.SelectedItem = "Ding";
             this.activarSegundero();
             this.posicionarEnEsquinaInferiorDerecha();
         }
@@ -64,6 +65,12 @@ namespace Regla20_20_20
 
             //Asignar la nueva ubicación
             this.Location = new Point(x, y);
+        }
+
+        private void cmbSonidoAviso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sonidoSeleccionado = cmbSonidoAviso.Text;
+            _controlador.setSonido(sonidoSeleccionado);
         }
     }
 }
