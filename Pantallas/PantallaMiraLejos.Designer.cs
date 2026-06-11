@@ -118,7 +118,7 @@
             ClientSize = new Size(629, 459);
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PantallaMiraLejos";

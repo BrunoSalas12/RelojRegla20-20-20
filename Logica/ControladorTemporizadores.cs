@@ -44,11 +44,12 @@ namespace Regla20_20_20.Logica
 
                     _temporizadores[1].agregarTiempo(_temporizadores[0].getCantidadExtra());
 
+                    pantallaMiraLejos.Show();
+                    pantallaMiraLejos.BringToFront();
+                    pantallaMiraLejos.TopMost = true;
                     pantallaMiraLejos.activarSegundero();
                     pantallaMiraLejos.Activate();
                     pantallaMiraLejos.Focus();
-                    pantallaMiraLejos.Show();
-                    pantallaMiraLejos.TopMost = true;
                 }
                 else 
                 {
