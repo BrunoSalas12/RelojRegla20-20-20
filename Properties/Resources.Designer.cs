@@ -79,6 +79,26 @@ namespace Regla20_20_20.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon iconoRegla20_20_20app {
+            get {
+                object obj = ResourceManager.GetObject("iconoRegla20-20-20app", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon iconoRegla20_20_20appTachado {
+            get {
+                object obj = ResourceManager.GetObject("iconoRegla20_20_20appTachado", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream tackEfectoSonidoReloj {

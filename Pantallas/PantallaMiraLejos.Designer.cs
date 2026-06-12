@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaMiraLejos));
             timerSegundero = new System.Windows.Forms.Timer(components);
             lblTemporizador = new Label();
             label1 = new Label();
@@ -119,13 +120,13 @@
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PantallaMiraLejos";
             Opacity = 0.85D;
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "PantallaMiraLejos";
+            Text = "Mira Lejos";
             WindowState = FormWindowState.Maximized;
             Load += PantallaMiraLejos_Load;
             KeyDown += PantallaMiraLejos_KeyDown;

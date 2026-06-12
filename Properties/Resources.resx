@@ -124,6 +124,12 @@
   <data name="dingEfectoSonido" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dingEfectoSonido.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="iconoRegla20-20-20app" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoRegla20-20-20app.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoRegla20_20_20appTachado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoRegla20-20-20appTachado.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tackEfectoSonidoReloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tackEfectoSonidoReloj.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
