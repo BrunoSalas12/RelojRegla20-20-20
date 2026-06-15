@@ -60,6 +60,7 @@ namespace Regla20_20_20.Logica
             if (!principal && sumoTiempo != 0)
             {
                 this.cambiarAPantallaPrincipal();
+                _temporizadores[1].reiniciar();
             }
         }
 
