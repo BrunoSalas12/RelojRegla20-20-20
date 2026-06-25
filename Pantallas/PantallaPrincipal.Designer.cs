@@ -36,6 +36,8 @@
             timerSegundero = new System.Windows.Forms.Timer(components);
             btnActivarPausar = new FontAwesome.Sharp.IconButton();
             btnReiniciar = new FontAwesome.Sharp.IconButton();
+            chbVisiblePausado = new CheckBox();
+            toolTip1 = new ToolTip(components);
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new Size(286, 46);
+            groupBox1.Size = new Size(165, 46);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "sonido aviso";
@@ -69,10 +71,10 @@
             cmbSonidoAviso.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSonidoAviso.FormattingEnabled = true;
             cmbSonidoAviso.Items.AddRange(new object[] { "Ninguno", "Ding", "BeepBeep" });
-            cmbSonidoAviso.Location = new Point(58, 12);
+            cmbSonidoAviso.Location = new Point(35, 12);
             cmbSonidoAviso.Margin = new Padding(4);
             cmbSonidoAviso.Name = "cmbSonidoAviso";
-            cmbSonidoAviso.Size = new Size(206, 26);
+            cmbSonidoAviso.Size = new Size(119, 26);
             cmbSonidoAviso.TabIndex = 0;
             cmbSonidoAviso.SelectedIndexChanged += cmbSonidoAviso_SelectedIndexChanged;
             // 
@@ -107,11 +109,31 @@
             btnReiniciar.UseVisualStyleBackColor = true;
             btnReiniciar.Click += btnReiniciar_Click;
             // 
+            // chbVisiblePausado
+            // 
+            chbVisiblePausado.AutoSize = true;
+            chbVisiblePausado.Checked = true;
+            chbVisiblePausado.CheckState = CheckState.Checked;
+            chbVisiblePausado.Font = new Font("Arial Rounded MT Bold", 10F);
+            chbVisiblePausado.Location = new Point(183, 140);
+            chbVisiblePausado.Name = "chbVisiblePausado";
+            chbVisiblePausado.Size = new Size(118, 20);
+            chbVisiblePausado.TabIndex = 6;
+            chbVisiblePausado.Text = "Pausa Visible";
+            toolTip1.SetToolTip(chbVisiblePausado, "Mantener siempre visible si el termporizador esta pausado");
+            chbVisiblePausado.UseVisualStyleBackColor = true;
+            chbVisiblePausado.CheckedChanged += chbVisiblePausado_CheckedChanged;
+            // 
+            // toolTip1
+            // 
+            toolTip1.BackColor = SystemColors.HighlightText;
+            // 
             // PantallaPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(470, 175);
+            Controls.Add(chbVisiblePausado);
             Controls.Add(btnReiniciar);
             Controls.Add(btnActivarPausar);
             Controls.Add(groupBox1);
@@ -139,5 +161,7 @@
         private System.Windows.Forms.Timer timerSegundero;
         private FontAwesome.Sharp.IconButton btnActivarPausar;
         private FontAwesome.Sharp.IconButton btnReiniciar;
+        private CheckBox chbVisiblePausado;
+        private ToolTip toolTip1;
     }
 }

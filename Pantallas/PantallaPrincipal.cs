@@ -36,6 +36,7 @@ namespace Regla20_20_20
                 btnActivarPausar.IconChar = FontAwesome.Sharp.IconChar.Play;
                 this.detenerSegundero();
             }
+            this.controlarTopMost();
         }
 
         public void activarSegundero() { timerSegundero.Start(); }
@@ -75,7 +76,7 @@ namespace Regla20_20_20
 
         private void PantallaPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.Shift) 
+            if (e.Control && e.Shift)
             { //Manejo de la combinación de teclas para agregar minutos al temporizador
                 //Con los números se pueden agregar hasta 10 minutos de tiempo de pantalla
                 switch (e.KeyCode)
@@ -112,6 +113,26 @@ namespace Regla20_20_20
                         break;
                 }
                 lblTemporizador.Text = _controlador.obtenerTiempoTemporizador(principal);
+            }
+        }
+
+        private void chbVisiblePausado_CheckedChanged(object sender, EventArgs e)
+        {
+            this.controlarTopMost();
+        }
+
+        private void controlarTopMost()
+        {
+            if (chbVisiblePausado.Checked && !activado)
+            {
+                this.TopMost = true;
+                this.MinimizeBox = false;
+                this.BringToFront();
+            }
+            else
+            {
+                this.TopMost = false;
+                this.MinimizeBox= true;
             }
         }
     }
