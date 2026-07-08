@@ -16,7 +16,8 @@ namespace Regla20_20_20.Entidades
         private readonly int[] valoresTiempoExtra = { 0, 0, 10, 10, 20, 20, 30, 30, 30, 40, 40 };
         private TemporizadorLejos()
         {
-            this.tiempoSegundos = 22; //22 segundos (00:22)
+            this.tiempoSegundos = 22; //22 segundos (00:22), dos segundos de margen para movimiento
+                                      //22 seconds, two seconds of margin to move
             this.cantidadExtra = 0;
         }
 
@@ -64,7 +65,8 @@ namespace Regla20_20_20.Entidades
 
         public void reiniciar()
         {
-            this.tiempoSegundos = 22; //22 segundos (00:22)
+            this.tiempoSegundos = 22; //22 segundos (00:22), dos segundos de margen para movimiento
+                                      //22 seconds, two seconds of margin to move
             this.cantidadExtra = 0;
         }
     }

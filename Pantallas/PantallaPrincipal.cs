@@ -25,17 +25,32 @@ namespace Regla20_20_20
 
         private void btnActivarPausar_Click(object sender, EventArgs e)
         {
-            this.activado = !this.activado;
             if (activado)
             {
-                btnActivarPausar.IconChar = FontAwesome.Sharp.IconChar.Pause;
-                this.activarSegundero();
+                this.pausar();
             }
             else
             {
-                btnActivarPausar.IconChar = FontAwesome.Sharp.IconChar.Play;
-                this.detenerSegundero();
+                this.activar();
             }
+        }
+
+        public void pausar()
+        {
+            this.activado = false;
+            btnActivarPausar.IconChar = FontAwesome.Sharp.IconChar.Play;
+            lblTemporizador.Text = _controlador.obtenerTiempoTemporizador(principal);
+            this.WindowState = FormWindowState.Normal;
+            this.detenerSegundero();
+            this.controlarTopMost();
+        }
+
+        public void activar()
+        {
+            this.activado = true;
+            btnActivarPausar.IconChar = FontAwesome.Sharp.IconChar.Pause;
+            lblTemporizador.Text = _controlador.obtenerTiempoTemporizador(principal);
+            this.activarSegundero();
             this.controlarTopMost();
         }
 

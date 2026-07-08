@@ -14,7 +14,8 @@ namespace Regla20_20_20.Entidades
         private static TemporizadorPantalla? _instancia;
         private TemporizadorPantalla()
         {
-            this.tiempoSegundos = 1202; //20 minutos y 2 segundos (20:02)
+            this.tiempoSegundos = 1202; //20 minutos y 2 segundos (20:02), dos segundos de margen para movimiento
+                                        //20 minutes and 2 seconds, two seconds of margin to move
             this.cantidadExtra = 0;
         }
 
@@ -68,7 +69,8 @@ namespace Regla20_20_20.Entidades
 
         public void reiniciar()
         {
-            this.tiempoSegundos = 1202; //20 minutos y 2 segundos (20:02)
+            this.tiempoSegundos = 1202; //20 minutos y 2 segundos (20:02), dos segundos de margen para movimiento
+                                        //20 minutes and 2 seconds, two seconds of margin to move
             this.cantidadExtra = 0;
         }
 

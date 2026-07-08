@@ -75,6 +75,10 @@ namespace Regla20_20_20.Pantallas
                     case Keys.D0:
                         _controlador.agregarTiempoTemporizador(10, this.principal);
                         break;
+
+                    case Keys.X:
+                        _controlador.cancelarMirarLejos();
+                        break;
                 }
             }
         }
